@@ -1,0 +1,25 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Status_of_task
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Task t = new Task(() =>
+            {
+                System.Threading.Thread.Sleep(5000);
+            });
+            t.Start();
+            t.Wait();
+            Console.WriteLine(t.Status);
+            Console.WriteLine("End of Main");
+
+
+}
+    }
+}
